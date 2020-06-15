@@ -67,7 +67,7 @@ LEGO version. See
 [Pixy documentation](https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:uploading_new_firmware)
 on how to install firmware.
 
-![PixyMon configure dialog](/Images/PixyMon_configure.png)
+![PixyMon configure dialog](/images/PixyMon_configure.png)
 
 Set `Data out port` to `I2C` and `I2C address` to `0x54` (or any other address
 you like).
