@@ -151,7 +151,7 @@ none.
 Set mode for Pixy (linetracking).
 
 *parameters*<br />
-`mode`.
+`mode`(Pixy2Mode): set mode for linetracking (see section Data Types).
 
 *return value*<br />
 none.
