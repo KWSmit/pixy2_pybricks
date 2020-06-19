@@ -11,9 +11,9 @@ other features. For more information visit the
 [Pixy wiki](https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:lego_wiki).
 
 **Pybricks** is Python for smart LEGO hubs, including Mindstorms EV3. It
-builds on MicroPython, which is a super-efficient version of Python that can run
-on the microcontrollers inside the smart hubs. This means your code really runs on
-the hub, which makes it super fast, too. For more information visit the
+builds on MicroPython, which is a super-efficient version of Python that can
+run on the microcontrollers inside the smart hubs. This means your code really
+runs on the hub, which makes it super fast, too. For more information visit the
 [Pybricks website](https://pybricks.com/).
 
 **LEGO Minstorms EV3** lets you build and program robots. Visit the
@@ -36,8 +36,10 @@ MicroPython extension.
 If you like you can also clone this entire repository to you computer. Open
 it in VS Code and run the following files:
 
-- `main.py` - This is an example of a two-motor robot chasing an object. Be sure
-to adjust the code to your robot configuration, as explained below.
+- `main.py` - This can be considered as a kind of 'Hello world' program. It shows
+you the basic stept how to use Pixy2 on Pybricks.
+- `chaser.py` - This is an example of a two-motor robot chasing an object. Be
+sure to adjust the code to your robot configuration, as explained below.
 - `linetracker.py` - This is a line-following robot. Again, adjust the code to
 the configuration of your robot.
 
@@ -81,7 +83,7 @@ the camera is connected to (e.g. `Port.S1`) and the I2C-address which you set
 on the Pixy2 (e.g. `0x54`, see previous paragraph).
 
 You can read from and write to the camera with methods
-`read(reg=0x00, length=*n*)` and `write(reg=0x00, data)`, with `*n*` the
+`read(reg=0x00, length=n)` and `write(reg=0x00, data)`, with `n` the
 number of bytes to read and `data` being a `bytes` array.
 
 Read the
@@ -90,7 +92,7 @@ for learning the serial interface protocol. With this information and the code
 in `pixy2_pybricks.py` as an example it's not hard to find out how to do the
 programming by yourself.
 
-## Using pixy_pybricks
+## Using pixy2_pybricks
 
 To make life more easier for you, you an use the classes from module
 `pixy2_pybricks` in your program. Just add the file `pixy2_pybricks.py`
@@ -103,7 +105,7 @@ projectdirectory on your computer.
 
 With class `Pixy2` you can use hte Pixy2 camera on your robot. Class
 `Pixy2` has two parameters: portnumber Pixy2 is connected to (values 1 to 4,
-default is 1) and I2C-address of Pixy2 (default `0x54):
+default is 1) and I2C-address of Pixy2 (default `0x54`):
 
 ```python
 from pixy2_pybricks import Pixy2

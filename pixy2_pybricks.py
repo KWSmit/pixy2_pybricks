@@ -11,9 +11,10 @@ Branch          -- Branch data
 Barcode         -- Barcode data
 MainFeatures    -- Common linetracking data
 
+
 Author  : Kees Smit
-Date    : May 27 2020
-Version : 1.0
+Date    : Jun 16 2020
+Version : 1.00
 License : 
 """
 from pybricks.parameters import Port
@@ -46,7 +47,7 @@ class Pixy2:
         
         Keyword arguments:
         port        -- portnumber to wich the Pixy2 is connected
-                       (INT in range (1, 4).
+                       (INT in range (1, 4)).
         i2c_address -- i2c address for communicating with Pixy2
                        (hexa-decimal, set in configuration Pixy2).
         """
@@ -285,6 +286,10 @@ class Block:
         self.tracking_index = None
         self.age = None
 
+    def __str__(self):
+        desc = 'sig: {}\nx: {}\ny: {}\nwidth:  {}\nheight: {}'.format(
+            self.sig, self.x_center, self.y_center, self.width, self.height)
+        return desc
 
 class Vector:
     """ Vector data for linetracking."""

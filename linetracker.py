@@ -1,4 +1,31 @@
 #!/usr/bin/env pybricks-micropython
+""" linetracker.py
+
+Demo program for using Pixy2 on PyBricks: let your robotrover
+follow a line.
+
+Usage: In Pixy2's configuration window set the interface to I2C and 
+       I2C address to 0x54. If you choose to use a different I2C address, 
+       change the value in the code of this file.
+
+       Build a robot with two motors (port B and C) and Pixy2 camera (port S1).
+       If you use different ports, adjust the code in this file.
+       
+       Start linetracker.py and your robot will follow the oject of sig1.
+       Push any button on the EV3-brick to stop the program.
+
+       For performance in following the line it may be necessary to adjust
+       the PID constants for your robot.
+
+See https://docs.pixycam.com for more inforamation about Pixy2.
+See https://docs.pybricks.com how to run programs on Pybricks.
+
+
+Author  : Kees Smit
+Date    : June 16 2020
+Version : 1.01
+License : 
+"""
 from pixy2_pybricks import (Pixy2,
                             MainFeatures,
                             Pixy2ConnectionError,

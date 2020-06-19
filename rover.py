@@ -1,3 +1,15 @@
+""" rover.py
+
+The Rover class can be used for a simple rover build with an LEGO EV3-brick
+with two motors. This class is used in the sample program linetracker.py,
+part of the tutorial how to use Pixy2 on Pybricks.
+
+
+Author  : Kees Smit
+Date    : June 16 2020
+Version : 1.00
+License : 
+"""
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor
 from pybricks.parameters import Port
